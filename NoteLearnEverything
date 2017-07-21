@@ -1,0 +1,113 @@
+/////////////Git
+git config --global user.email "nguyentthai96@gmail.com"
+git config --global user.name "NguyenThanhThai"
+
+.gitignore 
+* tức là thay cho một chuỗi dài ở trước
+muốn bỏ tất cả các file jar trong responsitory không upload lên thì để *.jar
+
+
+/////////////Intelij
+create main method fast https://www.jetbrains.com/help/idea/generating-main-method-example-of-applying-a-simple-live-template.html
+	psvm [Tab]
+
+general infor key android
+cd C:\Program Files\Java\jre1.8.0_131\bin 
+keytool -list -v -keystore mystore.keystore
+	keytool -list -v -keystore E:\THLsoft\KOPaykeyAndroid.jks
+	
+	
+Cấu hình mail google
+	https://support.google.com/mail/answer/78754 
+	https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbud
+	https://support.google.com/mail/answer/78754
+	
+	
+Thread android
+
+	public static boolean isRecursionEnable = false;
+
+	void runInBackground() {
+		if (isRecursionEnable)
+			return;    // Handle not to start multiple parallel threads
+
+		isRecursionEnable = true; // on exception on thread make it true again  
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				// DO your work here
+				// get the data
+				if (activity_is_not_in_background) {
+					runOnUiThread(new Runnable() {
+						@Override
+						public void run() {
+							//uddate UI
+							runInBackground();
+						}
+					});
+				} else {
+					runInBackground();
+				}
+			}
+		}).start();
+	}
+	
+	
+	
+	
+	AsyncTask.execute(new Runnable() {
+	   @Override
+	   public void run() {
+		  //TODO your background code
+	   }
+	});
+	
+	
+	
+	giao tiếp hai luồng 
+	// Set this up in the UI thread.
+
+	mHandler = new Handler(Looper.getMainLooper()) {
+		@Override
+		public void handleMessage(Message message) {
+			// This is where you do your work in the UI thread.
+			// Your worker tells you in the message what to do.
+		}
+	};
+
+	void workerThread() {
+		// And this is how you call it from the worker thread:
+		Message message = mHandler.obtainMessage(command, parameter);
+		message.sendToTarget();
+	}
+	
+	
+	runOnUiThread(new Runnable() {
+                   @Override
+                   public void run() {
+                       Toast.makeText(LoginActivity.this, getString(R.string.connect_server_failed), Toast.LENGTH_SHORT).show();
+                   }
+               });
+            }
+        });
+		
+		
+		
+		
+		
+	public boolean isOnline() {
+    ConnectivityManager cm =
+        (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+    NetworkInfo netInfo = cm.getActiveNetworkInfo();
+    return netInfo != null && netInfo.isConnectedOrConnecting();
+}
+
+
+
+
+
+
+
+
+Google/Analytics https://stackoverflow.com/questions/42269328/how-to-enable-google-analytics-in-firebase-project
+	Get Tracking ID from https://analytics.google.com

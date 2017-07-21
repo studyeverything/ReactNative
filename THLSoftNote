@@ -1,0 +1,32 @@
+TwoDPay google account -> firebase
+	id: 2dmpay@gmail.com
+	pwd: Pfme!955@
+
+
+Key android
+KOPaykeyAndroid.jks
+	alias: KOPay
+	pass: ntt.1996
+	MD5:  7B:E5:E6:98:9E:ED:39:4D:B0:42:21:B9:41:25:15:BA
+	SHA1: EA:0C:33:B1:9D:14:EE:D8:2B:B4:6A:29:05:F8:3C:27:38:75:56:70
+	SHA256: 94:7D:C9:82:98:7D:EA:F6:2C:7A:5C:CB:25:EE:E0:03:08:13:CB:F1:99:23:F7:19:59:30:DF:ED:84:8C:01:48
+	Signature algorithm name: SHA256withRSA
+	
+https://xd.adobe.com/view/47f45abd-01d5-400f-b3ba-f6dd8df43960/
+	
+KOPAY firebase
+bksgthlkopay@gmail.com
+thl123456789
+	
+Store app
+	https://nguyentthai96@bitbucket.org/tungpham6195/2dpay.mobile.store.git
+	
+	
+	
+==============================================
+THL card payment 2Dpay
+카드번호:4364 2006 9518 0008
+유효기간:04월 2021년
+주민번호:551119 - 1******
+KT 010 85251775
+김향수
