@@ -1,4 +1,14 @@
+========================================================
+Tài khoản cho store Highland Coffee trong Food Court
+user: highland01
+pass: admin
 
+store Highland Coffee và các store trong Food Court không thể ghi tag như store con bình thường
+
+Tài khoản cho store Starbuck Coffee ngoài Food Court
+user: starbuck01
+pass: admin
+========================================================
 
 	
 https://xd.adobe.com/view/47f45abd-01d5-400f-b3ba-f6dd8df43960/
@@ -37,7 +47,12 @@ Toast toast=Toast.makeText(getApplicationContext(), getString(R.string.connect_s
 				
 				
 			NTT tìm hiểu  new Handler().postDelayed(new Runnable() { in android
+
 			
+			
+			
+			
+========================================================
 
 Các table chưa biết dùng ntn
 TStorePayInfo
@@ -79,7 +94,7 @@ bảng này bị trùng lấp dữ liệu cần test kỹ lại TOrderMenuMaster
 TMenuImages bảng này hình như có sự nhằm lẫn gì ấy -> dư thừa
 Tối ưu chổ log của NIO
 xem data base store blabla sao id menu dầu tiên là 2
-Note database TPrepayOrderItem dư thừa một cột dữ liệu status cần xóa đi và nhớ cập nhật những api nào thêm xóa sửa trong bảng TPrepayOrderItem
+Note database TPrepayOrderItem dư thừa một cột dữ liệu status và updatetime cần xóa đi và nhớ cập nhật những api nào thêm xóa sửa trong bảng TPrepayOrderItem
 
 ============================================== Note My PC
 User: userGuest
@@ -90,6 +105,8 @@ KOPaykeyAndroid.jks
 alis: KOPay
 pass: ntt.1996
 pass master data: ntt.1996
+
+https://drive.google.com/drive/folders/0B7lGgYFPeW8PeEZSSTJEWllJdWs
 
 Key android
 KOPaykeyAndroid.jks
@@ -114,3 +131,4 @@ THL card payment 2Dpay
 주민번호:551119 - 1******
 KT 010 85251775
 김향수
+adb shell input text '김향수'

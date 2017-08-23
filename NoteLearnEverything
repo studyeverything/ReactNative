@@ -1,3 +1,18 @@
+Note instal terminal for windows
+	Setting developer mode for windows 
+	Install the new feature -> search Turn Windows features on or off -> check Windows Subsystem for Linux (Beta) and restart computer
+	search "bash" (auto download) --> default user to “root” with no password
+	
+	==> Search Bash on Ubuntu on Windows
+
+
+//Java thread with time out
+ExecutorService executor = Executors.newSingleThreadExecutor();
+executor.invokeAll(Arrays.asList(new Task()), 10, TimeUnit.MINUTES); // Timeout of 10 minutes.
+executor.shutdown();
+
+
+
 /////////////Git
 git config --global user.email "nguyentthai96@gmail.com"
 git config --global user.name "NguyenThanhThai"
@@ -140,3 +155,19 @@ Google/Analytics https://stackoverflow.com/questions/42269328/how-to-enable-goog
         }
         return buf.toString();
     }
+	
+	
+//TOmcat
+sudo systemctl daemon-reload
+sudo systemctl start tomcat
+sudo systemctl status tomcat
+Tomcat automatically starts at boot:
+sudo systemctl enable tomcat
+sudo service tomcat8 stop
+sudo service tomcat8 start
+
+
+
+// using resource with parameter
+<string name="welcome_messages">Hello, %1$s! You have %2$d new messages.</string>
+getString(R.string.welcome_message, "Test", 0);  //===>Hello Test! you have 0 new messages
