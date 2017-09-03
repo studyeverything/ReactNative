@@ -16,6 +16,8 @@ executor.shutdown();
 /////////////Git
 git config --global user.email "nguyentthai96@gmail.com"
 git config --global user.name "NguyenThanhThai"
+$ git log --graph --oneline --all
+
 
 .gitignore 
 * tức là thay cho một chuỗi dài ở trước
@@ -159,15 +161,62 @@ Google/Analytics https://stackoverflow.com/questions/42269328/how-to-enable-goog
 	
 //TOmcat
 sudo systemctl daemon-reload
-sudo systemctl start tomcat
-sudo systemctl status tomcat
+sudo systemctl start tomcat8
+sudo systemctl stop tomcat8
+sudo systemctl restart tomcat8
+sudo systemctl status tomcat8
 Tomcat automatically starts at boot:
-sudo systemctl enable tomcat
+sudo systemctl enable tomcat8
 sudo service tomcat8 stop
 sudo service tomcat8 start
+sudo service tomcat8 restart
+sudo service tomcat8 status
+
+netstat -lt
 
 
+It's likely that the cause of the issue with port 80 is that low ports require root privileges to bind, and tomcat, by default, runs as a non-root user. The way to get around this is to use authbind.
+
+apt-get install authbind
+touch /etc/authbind/byport/80
+chown tomcat6:tomcat6 /etc/authbind/byport/80
+Then, modify the config file for tomcat to enable authbind support.
+
+nano /etc/default/tomcat6
+I believe the setting for authbind is near the bottom of the file.
+
+https://rm5248.com/setup-tomcat-8-on-debian-8-on-port-80/
+
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+https://quantrimang.com/cac-lenh-shell-co-ban-trong-linux-35789
 
 // using resource with parameter
 <string name="welcome_messages">Hello, %1$s! You have %2$d new messages.</string>
 getString(R.string.welcome_message, "Test", 0);  //===>Hello Test! you have 0 new messages
+
+
+
+
+
+
+
+
+Global package:
+npm uninstall -g angular-cli @angular/cli
+npm cache clean
+npm install -g @angular/cli@latest
+ng update
+
+
+Local project package:
+
+rm -rf node_modules dist # On Windows use rmdir /s /q node_modules dist
+npm install --save-dev @angular/cli@latest
+npm install
+ng init
+
+
+
+sudo service mysql restart
+sudo restart mysql
