@@ -220,3 +220,20 @@ ng init
 
 sudo service mysql restart
 sudo restart mysql
+
+
+//Support android api 19+ https://developer.android.com/reference/javax/crypto/SecretKeyFactory.html
+
+
+
+
+call affter Map Url Spring boot https://stackoverflow.com/questions/24271705/springapplication-run-main-method
+@Component
+public class RunListener implements CommandLineRunner {
+    @Override
+    public void run(String... strings) throws Exception {
+        System.out.println("RunListener run get data default config "+strings);
+        SettingConstans.getInstance();
+    }
+}
+hoặc implements ApplicationListener<ContextRefreshedEvent>
